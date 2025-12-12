@@ -71,7 +71,7 @@ Each entry in FSRD contains the following key fields:
 | `source_dataset` | The original source of the image (e.g., COCO, SA-1B). | `COCO` |
 
 ****
-![examples of generation](./assets/4.png)
+![examples of generation](./assets/3.png)
 
 ![examples of some FSRD's caption](./assets/4.png)
 
