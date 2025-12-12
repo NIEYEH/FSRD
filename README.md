@@ -1,8 +1,8 @@
 # Learning from Ambiguity: A Fuzzy Spatial Relationship Dataset for Human-Aligned Text-to-Image Generation
 
 <div align="center">
-  
-[![Dataset](https://img.shields.io/badge/Dataset-HuggingFace-yellow)]
+  
+[![Dataset](https://img.shields.io/badge/Dataset-HuggingFace-yellow)](Link to your HF repo)
 [![License](https://img.shields.io/badge/License-CC%20BY%204.0-green)](LICENSE)
 
 **[Tianjiao Liang, Qinlong Li, Honggang Qi]**
@@ -11,29 +11,82 @@
 
 ---
 
-> **Abstract:** Recent text-to-image (T2I) diffusion models achieve impressive visual fidelity but consistently struggle with interpreting and generating images from natural language prompts containing fuzzy spatial relationships (e.g., "somewhere to the right," "fairly close"). This gap arises because standard training datasets predominantly feature precise spatial descriptions, neglecting the graded, context-dependent nature of human spatial language. To address this, we introduce the Fuzzy Spatial Relationship Dataset (FSRD), a large-scale vision-language corpus designed to bridge this divide. FSRD comprises approximately eight million images from five public sources, each paired with synthetically generated captions that replace crisp spatial predicates with calibrated vague expressions. We detail an automated pipeline for constructing these captions, which involves a high-recall multi-detector ensemble for object localisation and a two-stage captioning process using vision-language models to generate globally coherent and pairwise fuzzy spatial descriptions. To evaluate model performance under fuzzy instructions, we propose a novel Spatial Fuzziness Metric (SFM) that combines deterministic geometric verification with semantic alignment scoring. Fine-tuning Stable Diffusion 2.1 on FSRD demonstrates consistent and substantial improvements: our model achieves a state-of-the-art VISOR accuracy of 68.0% on the SR2D benchmark and superior performance on the spatial subset of T2I-CompBench. Qualitative analyses further confirm its enhanced ability to faithfully render instructions like "roughly above" or "very close to." By explicitly modelling spatial vagueness, FSRD advances T2I generation towards more robust and human-aligned spatial understanding.
+## 🤔 The Problem: The Gap in Spatial Understanding
+
+Recent Text-to-Image (T2I) diffusion models excel at visual fidelity but consistently **struggle with interpreting fuzzy spatial language**—terms like *"somewhere to the right,"* *"roughly above,"* or *"fairly close."*
+
+This failure stems from a fundamental data imbalance: standard training datasets (e.g., COCO) predominantly feature **precise, crisp spatial descriptions**, neglecting the graded and context-dependent nature of how humans actually describe object layouts. FSRD is designed to explicitly bridge this critical divide.
+
+****
+![comparison between traditional caption and FSRD caption](./assets/1.png)
+
+---
+
+## 📜 Abstract
+
+> **Abstract:** Recent text-to-image (T2I) diffusion models achieve impressive visual fidelity but consistently struggle with interpreting and generating images from natural language prompts containing fuzzy spatial relationships (e.g., "somewhere to the right," "fairly close"). This gap arises because standard training datasets predominantly feature precise spatial descriptions, neglecting the graded, context-dependent nature of human spatial language. To address this, we introduce the **Fuzzy Spatial Relationship Dataset (FSRD)**, a large-scale vision-language corpus designed to bridge this divide. FSRD comprises approximately eight million images from five public sources, each paired with synthetically generated captions that replace crisp spatial predicates with calibrated vague expressions. We detail an automated pipeline for constructing these captions, which involves a high-recall multi-detector ensemble for object localisation and a two-stage captioning process using vision-language models to generate globally coherent and pairwise fuzzy spatial descriptions. By explicitly modelling spatial vagueness, FSRD advances T2I generation towards more robust and human-aligned spatial understanding.
 
 ---
 
 ## 🔥 Highlights
 
-- **📚 Large-Scale:** Roughly **8 million images** sourced from COCO, CC12M, SA-1B, etc., re-captioned with rich fuzzy spatial semantics.
-- **🧠 Automated Pipeline:** A robust two-stage framework combining ensemble detection (Grounding DINO, OWL-ViT) and VLM-based fuzzy captioning.
-- **📏 New Metric:** **Spatial Fuzziness Metric (SFM)**, combining deterministic geometric verification with semantic alignment to evaluate compliance with vague instructions.
-- **🚀 SOTA Performance:** Fine-tuning SD 2.1 on FSRD achieves state-of-the-art results on the **SR2D benchmark** and **T2I-CompBench**.
+- **📚 Large-Scale & Diverse:** Approximately **8 million images** sourced from COCO, CC12M, SA-1B, and other public datasets, re-captioned with rich fuzzy spatial semantics.
+- **🧠 Automated Pipeline:** A robust, fully automated two-stage framework combining powerful ensemble detection and advanced VLM-based fuzzy caption generation.
+- **💡 Human Alignment:** Explicitly models the **graded, context-dependent nature** of human spatial language for better T2I generation fidelity.
+- **🚀 Enhanced Performance:** Fine-tuning on FSRD consistently and substantially improves a state-of-the-art model’s ability to faithfully render instructions like *"roughly above"* or *"very close to."*
 
 ---
 
-## 🏗️ The Pipeline
+## 🏗️ The Automated Construction Pipeline
 
-Our fully automated construction pipeline ensembles detection modules for high-recall detection, followed by a two-stage captioning process to produce fluent spatial descriptions with controllable fuzziness.
+Our pipeline ensures high-quality data generation at scale by combining high-recall detection with controlled, fluent captioning.
+
+****
+![Our pipeline](./assets/2.png)
+
+### Pipeline Details
+
+Our two-stage process leverages the strengths of recent foundation models:
+
+1.  **Object Localisation Ensemble:** We employ a high-recall ensemble of detectors (including models like **Grounding DINO** and **OWL-ViT**) to ensure robust and accurate bounding boxes for relevant objects within the scene.
+2.  **Two-Stage Fuzzy Captioning:**
+    * **Global Coherence:** A Vision-Language Model is initially used to generate a fluent, globally coherent description of the scene.
+    * **Pairwise Fuzzification:** Crisp spatial predicates (e.g., "to the left," "above") are identified and systematically replaced with **calibrated vague expressions** (e.g., "towards the left side," "roughly above") based on geometric verification and a learned vagueness scale.
 
 ---
 
-## 📂 Dataset Access
+## 📂 Dataset Structure and Examples
 
-The FSRD dataset contains images paired with global scene descriptions and structured pairwise relations.
+The FSRD dataset provides images paired with both a global, fluent fuzzy caption and a structured list of pairwise fuzzy relations, enabling flexible usage for various T2I fine-tuning methods.
+
+### Data Format
+
+Each entry in FSRD contains the following key fields:
+
+| Field Name | Description | Example Content |
+| :--- | :--- | :--- |
+| `image_id` | Unique identifier for the image. | `cc_0000001` |
+| `global_caption_fuzzy` | The complete, human-aligned caption containing fuzzy terms. | A cat is **somewhere close to** a table with a laptop **roughly on top of** it. |
+| `pairwise_relations` | A list of structured subject-predicate-object tuples. | `[('cat', 'somewhere close to', 'table'), ('laptop', 'roughly on top of', 'table')]` |
+| `source_dataset` | The original source of the image (e.g., COCO, SA-1B). | `COCO` |
+
+****
+![examples of generation](./assets/4.png)
+
+![examples of some FSRD's caption](./assets/4.png)
+
+---
+
+## ⬇️ Dataset Access and Usage
+
+The FSRD dataset and our fine-tuned models are available for public use.
 
 ### Download
-- **HuggingFace:** [Link to your HF repo]
+- **HuggingFace Dataset:** [Link to your HF repo]
+- **Trained Checkpoints:** Coming Soon / [Link to model weights]
 
+### Quick Start (Fine-Tuning)
+
+To reproduce our results or fine-tune your own T2I model (e.g., Stable Diffusion) on FSRD:
+
+```bash
