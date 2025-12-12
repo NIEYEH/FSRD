@@ -17,16 +17,16 @@
 
 ## 🔥 Highlights
 
-- [cite_start]**📚 Large-Scale:** Roughly **8 million images** sourced from COCO, CC12M, SA-1B, etc., re-captioned with rich fuzzy spatial semantics.
-- [cite_start]**🧠 Automated Pipeline:** A robust two-stage framework combining ensemble detection (Grounding DINO, OWL-ViT) and VLM-based fuzzy captioning.
-- [cite_start]**📏 New Metric:** **Spatial Fuzziness Metric (SFM)**, combining deterministic geometric verification with semantic alignment to evaluate compliance with vague instructions.
-- [cite_start]**🚀 SOTA Performance:** Fine-tuning SD 2.1 on FSRD achieves state-of-the-art results on the **SR2D benchmark** and **T2I-CompBench**.
+- **📚 Large-Scale:** Roughly **8 million images** sourced from COCO, CC12M, SA-1B, etc., re-captioned with rich fuzzy spatial semantics.
+- **🧠 Automated Pipeline:** A robust two-stage framework combining ensemble detection (Grounding DINO, OWL-ViT) and VLM-based fuzzy captioning.
+- **📏 New Metric:** **Spatial Fuzziness Metric (SFM)**, combining deterministic geometric verification with semantic alignment to evaluate compliance with vague instructions.
+- **🚀 SOTA Performance:** Fine-tuning SD 2.1 on FSRD achieves state-of-the-art results on the **SR2D benchmark** and **T2I-CompBench**.
 
 ---
 
 ## 🏗️ The Pipeline
 
-[cite_start]Our fully automated construction pipeline ensembles detection modules for high-recall detection, followed by a two-stage captioning process to produce fluent spatial descriptions with controllable fuzziness.
+Our fully automated construction pipeline ensembles detection modules for high-recall detection, followed by a two-stage captioning process to produce fluent spatial descriptions with controllable fuzziness.
 
 ---
 
