@@ -76,17 +76,3 @@ Each entry in FSRD contains the following key fields:
 ![examples of some FSRD's caption](./assets/4.png)
 
 ---
-
-## ⬇️ Dataset Access and Usage
-
-The FSRD dataset and our fine-tuned models are available for public use.
-
-### Download
-- **HuggingFace Dataset:** [Link to your HF repo]
-- **Trained Checkpoints:** Coming Soon / [Link to model weights]
-
-### Quick Start (Fine-Tuning)
-
-To reproduce our results or fine-tune your own T2I model (e.g., Stable Diffusion) on FSRD:
-
-```bash
