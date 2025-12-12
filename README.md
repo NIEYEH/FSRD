@@ -1,4 +1,4 @@
-# FSRD: A Large-Scale Dataset for Fuzzy Spatial Relationship Understanding
+# Learning from Ambiguity: A Fuzzy Spatial Relationship Dataset for Human-Aligned Text-to-Image Generation
 
 <div align="center">
   
