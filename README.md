@@ -2,9 +2,8 @@
 
 <div align="center">
   
-[![Dataset](https://img.shields.io/badge/Dataset-HuggingFace-yellow)](Link_to_your_HF_repo) [![License](https://img.shields.io/badge/License-CC%20BY%204.0-green)](LICENSE)
-
-[![数据集]([https://img.shields.io/badge/Dataset-HuggingFace-yellow](https://huggingface.co/datasets/NIEYEHH/Fuzzy_Spatial_Relationship_Dataset/tree/main))](您的HF代码库链接) [![许可证]([https://img.shields.io/badge/License-CC%20BY%204.0-green](https://spdx.org/licenses/CC-BY-NC-SA-4.0))](LICENSE)
+[![数据集](https://huggingface.co/datasets/NIEYEHH/Fuzzy_Spatial_Relationship_Dataset/tree/main)] 
+[![许可证](https://spdx.org/licenses/CC-BY-NC-SA-4.0)](LICENSE)
 
 [Tianjiao Liang, Qinlong Li, Honggang Qi]
 
