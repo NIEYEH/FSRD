@@ -2,8 +2,8 @@
 
 <div align="center">
   
-[![Dataset](https://img.shields.io/badge/Dataset-HuggingFace-yellow)](Link to your HF repo)
-[![License](https://img.shields.io/badge/License-CC%20BY%204.0-green)](LICENSE)
+[!][Dataset](https://img.shields.io/badge/Dataset-HuggingFace-yellow)](Link to your HF repo)
+[!][License](https://img.shields.io/badge/License-CC%20BY%204.0-green)](LICENSE)
 
 **[Tianjiao Liang, Qinlong Li, Honggang Qi]**
 
