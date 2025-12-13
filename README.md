@@ -2,8 +2,7 @@
 
 <div align="center">
   
-[![数据集](https://huggingface.co/datasets/NIEYEHH/Fuzzy_Spatial_Relationship_Dataset/tree/main)] 
-[![许可证](https://spdx.org/licenses/CC-BY-NC-SA-4.0)](LICENSE)
+[![Hugging Face Dataset](https://img.shields.io/badge/Dataset-HuggingFace-FFD21E.svg?logo=huggingface&logoColor=black)](https://huggingface.co/datasets/NIEYEHH/Fuzzy_Spatial_Relationship_Dataset)
 
 [Tianjiao Liang, Qinlong Li, Honggang Qi]
 
