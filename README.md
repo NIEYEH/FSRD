@@ -2,7 +2,9 @@
 
 <div align="center">
   
-[![Hugging Face Dataset](https://img.shields.io/badge/Dataset-HuggingFace-FFD21E.svg?logo=huggingface&logoColor=black)](https://huggingface.co/datasets/NIEYEHH/Fuzzy_Spatial_Relationship_Dataset)
+[![Hugging Face Dataset](https://img.shields.io/badge/Dataset-HuggingFace-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/datasets/NIEYEHH/Fuzzy_Spatial_Relationship_Dataset/tree/main)
+&nbsp;
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
 
 [Tianjiao Liang, Qinlong Li, Honggang Qi]
 
