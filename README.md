@@ -1,4 +1,4 @@
-# Learning from Ambiguity: A Fuzzy Spatial Relationship Dataset for Human-Aligned Text-to-Image Generation
+<img width="344" height="69" alt="image" src="https://github.com/user-attachments/assets/985ecd5c-4622-48ee-a83a-282bf9b2663b" /># Learning from Ambiguity: A Fuzzy Spatial Relationship Dataset for Human-Aligned Text-to-Image Generation
 
 Code for "Learning from Ambiguity: A Fuzzy Spatial Relationship Dataset for Human-Aligned Text-to-Image Generation" submitted to The Visual Computer!
 
@@ -7,6 +7,7 @@ Code for "Learning from Ambiguity: A Fuzzy Spatial Relationship Dataset for Huma
 [![Hugging Face Dataset](https://img.shields.io/badge/Dataset-HuggingFace-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/datasets/NIEYEHH/Fuzzy_Spatial_Relationship_Dataset/tree/main)
 &nbsp;
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
+[![DOI](https://zenodo.org/badge/1114559837.svg)](https://doi.org/10.5281/zenodo.17960429)
 
 [Tianjiao Liang, Qinlong Li, Honggang Qi]
 
