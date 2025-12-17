@@ -1,4 +1,4 @@
-<img width="344" height="69" alt="image" src="https://github.com/user-attachments/assets/985ecd5c-4622-48ee-a83a-282bf9b2663b" /># Learning from Ambiguity: A Fuzzy Spatial Relationship Dataset for Human-Aligned Text-to-Image Generation
+# Learning from Ambiguity: A Fuzzy Spatial Relationship Dataset for Human-Aligned Text-to-Image Generation
 
 Code for "Learning from Ambiguity: A Fuzzy Spatial Relationship Dataset for Human-Aligned Text-to-Image Generation" submitted to The Visual Computer!
 
